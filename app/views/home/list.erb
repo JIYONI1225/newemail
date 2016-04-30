@@ -1,0 +1,26 @@
+<body>
+<style type="text/css">
+<!-- 
+body { 
+background="배경 3.jpg";
+background-position : 50% 50%; 
+}
+--> 
+</style>
+
+
+
+<h1> ♡~보낸 화살들~♡ </h1>
+
+<% @every_post.each do |p| %>
+    제목 : <%= p.title %> <br>
+    내용 : <%= p.content %> <br>
+    화살 받은 사람 : <%= p.email %> <br>
+    TIME : <%= p.created_at %> 
+    <a href ="/update_view/<%=p.id%>"> <h7>[REWRITE]</h7></a>
+    <a href ="/destroy/<%=p.id%>"> <h7>[DELETE]</h7></a>
+    <hr>
+<%end%>
+</body>
+
+<div class="label label-warning"><h4><a href="/"> ♡~화살 쏘기~♡ </a></h4></div>
